@@ -23,17 +23,6 @@ export const getJobs = async (req, res) => {
   }
 };
 
-// Create a new job posting
-export const createJob = async (req, res) => {
-  try {
-    const job = new Job(req.body);
-    await job.save();
-    res.status(201).json(job);
-  } catch (error) {
-    res.status(400).json({ message: "Invalid Job Data", error });
-  }
-};
-
 
 export const createProfile = async (req, res) => {
   try {
@@ -44,19 +33,6 @@ export const createProfile = async (req, res) => {
     res.status(400).json({ message: "Invalid Job Data", error });
   }
 };
-
-
-
-export const createProfile = async (req, res) => {
-  try {
-    const job = new Job(req.body);
-    await job.save();
-    res.status(201).json(job);
-  } catch (error) {
-    res.status(400).json({ message: "Invalid Job Data", error });
-  }
-};
-
 
 export const creatingJob = async (req, res) => {
   try {
