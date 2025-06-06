@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use("/login",loginRoute);
 app.use("/api", jobRoutes);
 app.use("/set1",setRoutes);
 const PORT = process.env.PORT || 5000;
